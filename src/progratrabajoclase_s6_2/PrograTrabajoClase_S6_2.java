@@ -4,6 +4,8 @@
  */
 package progratrabajoclase_s6_2;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author lizet
@@ -16,21 +18,26 @@ public class PrograTrabajoClase_S6_2 {
     public static void main(String[] args) {
         // TODO code application logic here
         double bono;
-        Bonificacion empleado01= new Bonificacion("Ana","mujer",20000,20);
-            bono=empleado01.calcularbono(9);
-            System.out.println("La bonificacion de "+empleado01.nombre+" es de "+bono);
+        int antiguedad ;
+        Bonificacion empleado01= new Bonificacion("Ana Martinez","mujer",20000,20);
+           antiguedad=Integer.parseInt(JOptionPane.showInputDialog("Ingrese la antiguedad del empleado "+empleado01.nombre));
+            empleado01.calcularbono(antiguedad);
+            empleado01.mostrarEmp();
         
-        Bonificacion empleado02= new Bonificacion("Carlos","hombre",27000,42);
-            bono=empleado02.calcularbono(8);
-            System.out.println("La bonificacion de "+empleado02.nombre+" es de "+bono);
+        Bonificacion empleado02= new Bonificacion("Carlos Rodriguez","hombre",27000,42);
+           antiguedad=Integer.parseInt(JOptionPane.showInputDialog("Ingrese la antiguedad del empleado "+empleado02.nombre));
+            empleado02.calcularbono(antiguedad);
+            empleado02.mostrarEmp();
         
-        Bonificacion empleado03= new Bonificacion("Ricardo","hombre",15000,24);
-            bono=empleado03.calcularbono(6);
-            System.out.println("La bonificacion de "+empleado03.nombre+" es de "+bono);
+        Bonificacion empleado03= new Bonificacion("Ricardo Paz","hombre",15000,24);
+             antiguedad=Integer.parseInt(JOptionPane.showInputDialog("Ingrese la antiguedad del empleado "+empleado03.nombre));
+            empleado03.calcularbono(antiguedad);
+            empleado03.mostrarEmp();
          
-        Bonificacion empleado04= new Bonificacion("Lizeth","mujer",60000,27);
-            bono=empleado04.calcularbono(2);
-            System.out.println("La bonificacion de "+empleado04.nombre+" es de "+bono);  
+        Bonificacion empleado04= new Bonificacion("Lilian Medina","mujer",60000,27);
+            antiguedad=Integer.parseInt(JOptionPane.showInputDialog("Ingrese la antiguedad del empleado "+empleado04.nombre));
+            empleado04.calcularbono(antiguedad);
+            empleado04.mostrarEmp();
     }
     
 }
